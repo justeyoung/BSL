@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BSL practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section id="setup" class="screen">
+      <div class="block">
+        <label for="seconds">How many seconds per slide?</label>
+        <div class="row">
+          <input id="seconds" type="text" inputmode="numeric" autocomplete="off" maxlength="3">
+          <button id="start" type="button" disabled>Start</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="session" class="screen" hidden>
+      <div class="block" id="slide"></div>
+      <div class="meta"><span id="count"></span><span id="timer"></span></div>
+      <div class="controls">
+        <button id="stop" type="button">Stop</button>
+        <button id="continue" type="button">Continue</button>
+        <button id="restart" type="button">Restart</button>
+      </div>
+    </section>
+
+    <section id="end" class="screen" hidden>
+      <div class="block">
+        <p>Practice ended.</p>
+        <button id="again" type="button">Start another practice</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
